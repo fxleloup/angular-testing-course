@@ -39,9 +39,9 @@ fdescribe('HomeComponent', () => {
       // compilé en asynchrone, donc on rajoute async pour attendre la fin de l'exécution
       // de la fonction passée en paramètre du bloc beforeEach avant d'attaquer les tests
       .then(() => {
-        componentUnderTestStateDriver = TestBed.createComponent(HomeComponent);
+        componentUnderTestStateDriver = TestBed.createComponent(HomeComponent); // fixture
         componentUnderTest = componentUnderTestStateDriver.componentInstance;
-        componentUnderTestSpy = componentUnderTestStateDriver.debugElement;
+        componentUnderTestSpy = componentUnderTestStateDriver.debugElement; // debugElement
         coursesServiceSpy = TestBed.get(CoursesService);
       });
   }));
